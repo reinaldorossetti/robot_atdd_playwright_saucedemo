@@ -1,0 +1,64 @@
+# This workflow will install Python dependencies, run tests and lint with a single version of Python
+# For more information see: https://help.github.com/actions/language-and-framework-guides/using-python-with-github-actions
+name: Pabot Testing
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+  schedule:
+    # * is a special character in YAML so you have to quote this string
+    - cron:  '30 10 * * 5'
+    
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - uses: actions/setup-node@v3
+      with:
+        node-version: 16
+    - name: Install operating system dependencies
+      run: |
+       npm install -g allure-commandline --save-dev |
+       rfbrowser init
+
+    - name: Set up Python 3.10
+      uses: actions/setup-python@v3
+      with:
+        python-version: "3.10"
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+    - name: Run tests
+      if: always()
+      continue-on-error: true
+      run: |
+        pabot --outputdir my_reports --listener allure_robotframework  atests/features/
+      env:
+        ALLURE_MAX_STEP_MESSAGE_COUNT: 5
+    #- name: Rerun tests failed
+    #  if: always()
+    #  continue-on-error: true
+    #  run: |
+    #   python -m robot --listener allure_robotframework --rerunfailed my_reports/output.xml --output my_reports/rerun.xml -i api_tests ./
+    # env:
+    #    ALLURE_MAX_STEP_MESSAGE_COUNT: 5
+    - name: 📊 Collect Allure files and generate allure-report folder
+      run: |
+        allure generate ./output/allure -o allure-results/
+    - name: 🎁 Publishing Allure artifact to GitHub Actions
+      uses: actions/upload-artifact@v3
+      with:
+        name: my_reports
+        path: my_reports
+        
+    - name: Deploy
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_branch: gh-pages  # default: gh-pages
+        publish_dir: allure-results
+        destination_dir: allure-results

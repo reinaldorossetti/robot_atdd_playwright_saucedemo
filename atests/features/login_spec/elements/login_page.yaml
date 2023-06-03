@@ -1,0 +1,4 @@
+USER_INPUT:   "css=form #user-name"
+PASSWORD_INPUT: "css=form #password"
+LOGIN_BUTTON: "css=form #login-button"
+INVENTORY_LOCATOR: "css=#inventory_container:first-of-type"

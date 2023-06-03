@@ -1,0 +1,5 @@
+USER_INPUT:   "css=form #user-name"
+ADD_CART_BUTTON: "css=button[id*=\"add-to-cart-sauce-labs\"]"
+BACK_PRODUCTS_BUTTON: "id=back-to-products"
+INVENTORY_LOCATOR: "css=#inventory_container:first-of-type"
+CART_BUTTON:   "id=shopping_cart_container"
