@@ -96,6 +96,6 @@ jobs:
         ignore_cert: true
         # Optional converting Markdown to HTML (set content_type to text/html too):
         convert_markdown: true
-        attachments: attachments.zip,git.diff,./my_reports/*.*
+        attachments: attachments.zip,git.diff,./my_reports/${{matrix.browser}}/*.*
         # Optional priority: 'high', 'normal' (default) or 'low'
         priority: normal
