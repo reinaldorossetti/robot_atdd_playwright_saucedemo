@@ -18,7 +18,6 @@ jobs:
       matrix:
         os: [ubuntu-latest]
         browser: [chromium,firefox,webkit]
-        # browser-channel: [chrome,msedge]
     runs-on: ${{ matrix.os }}
     permissions:
       contents: write
@@ -47,13 +46,13 @@ jobs:
         pabot --outputdir my_reports/${{matrix.browser}} --listener allure_robotframework --variable  HEADLESS_FLAG:True  --variable  BROWSER:${{matrix.browser}}     atests/features/
       env:
         ALLURE_MAX_STEP_MESSAGE_COUNT: 5
-    #- name: Rerun tests failed
-    #  if: always()
-    #  continue-on-error: true
-    #  run: |
-    #   python -m robot --listener allure_robotframework --rerunfailed my_reports/output.xml --output my_reports/rerun.xml -i api_tests ./
-    # env:
-    #    ALLURE_MAX_STEP_MESSAGE_COUNT: 5
+    - name: Rerun tests failed
+      if: always()
+      continue-on-error: true
+      run: |
+       python -m robot --listener allure_robotframework --rerunfailed my_reports/${{matrix.browser}}/output.xml --output my_reports/${{matrix.browser}}/rerun.xml -i api_tests ./
+     env:
+        ALLURE_MAX_STEP_MESSAGE_COUNT: 5
     - name: 📊 Collect Allure files and generate allure-report folder
       run: |
         allure generate ./output/allure -o allure-results/
@@ -73,7 +72,6 @@ jobs:
     - name: Send mail
       uses: dawidd6/action-send-mail@v3
       with:
-        connection_url: ${{secrets.MAIL_CONNECTION}}
         # Required mail server address if not connection_url:
         server_address: smtp.gmail.com
         # Server port, default 25:
