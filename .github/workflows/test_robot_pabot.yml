@@ -47,7 +47,7 @@ jobs:
       env:
         ALLURE_MAX_STEP_MESSAGE_COUNT: 5
     - name: Rerun tests failed
-      if: always()
+      if: success() || failure()
       continue-on-error: true
       run: |
        python -m robot --listener allure_robotframework --rerunfailed my_reports/${{matrix.browser}}/output.xml --output my_reports/${{matrix.browser}}/rerun.xml -i api_tests ./
@@ -89,7 +89,8 @@ jobs:
         # Required sender full name (address can be skipped):
         from: automation.reinaldo@gmail.com
         # Optional plain body:
-        html_body: <p><b>Build of Tests ;) </p></b><br><p>Project URL https://github.com/${{github.repository}} </p><br>
+        html_body: <p><b>Build of Tests ;) </p></b><br>
+              <p>Project URL https://github.com/reinaldorossetti/robot_atdd_playwright_saucedemo </p><br>
               <p>Report ${{matrix.browser}} <a href="https://reinaldorossetti.github.io/robot_atdd_playwright_saucedemo/${{matrix.browser}}/#">Link ${{matrix.browser}}</a></p>
         # Optional unsigned/invalid certificates allowance:
         ignore_cert: true
