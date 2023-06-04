@@ -30,6 +30,7 @@ jobs:
     - name: Install operating system dependencies
       run: |
        npm install -g allure-commandline --save-dev
+       npx playwright install-deps
     - name: Set up Python 3.10
       uses: actions/setup-python@v3
       with:
