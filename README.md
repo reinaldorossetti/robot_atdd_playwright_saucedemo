@@ -4,7 +4,7 @@ Sample Project with Robot e Playwright Frameworks (Allure Report and GitActions 
 Projeto Exemplo usando o Robot Framework. Projeto para estudo sobre o Framework.  
 
 Report do Projeto utilizando o Git Actions:   
-https://reinaldorossetti.github.io/robot_atdd_playwright_saucedemo//allure-results/#  
+https://reinaldorossetti.github.io/robot_atdd_playwright_saucedemo/allure-results/#
 
 Na esteira estamos usando em uma PIPELINE o Pabot para rodar em paralelo as features:  
 https://github.com/reinaldorossetti/robot_samples_api_test/blob/main/.github/workflows/test_robot_pabot.yml  
