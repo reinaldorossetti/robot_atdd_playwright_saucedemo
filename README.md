@@ -6,7 +6,7 @@ chromium browser:
 https://reinaldorossetti.github.io/robot_atdd_playwright_saucedemo/chromium/#  
 firefox browser:  
 https://reinaldorossetti.github.io/robot_atdd_playwright_saucedemo/firefox/#  
-webkit browser:
+webkit browser:  
 https://reinaldorossetti.github.io/robot_atdd_playwright_saucedemo/webkit/#
 
 Na esteira estamos usando em uma PIPELINE o Pabot para rodar em paralelo as features:  
@@ -68,7 +68,7 @@ Folder Structure Conventions
 > Folder structure and naming conventions for my project.
 
 ### A typical cucumber directory pattern.
-´´´
+```
 ├── atests                      # Feature folder is main project (root code).
     ├── support                 # Common functions that are shared in the project.
     ├── features                # Folder where the features and their respective folder specification will be located.
@@ -81,7 +81,7 @@ Folder Structure Conventions
 ├── LICENSE
 ├── README.md                   # Simplified Project Documentation.
 └── requirements.txt            # Here will be the Project's libraries, define the versions used.
-´´´
+```
 
 > Use short lowercase names at least for the top-level files and folders except  
 > `LICENSE`, `README.md`, in folder pages the name follow github default in Letter case.  
@@ -101,15 +101,15 @@ robotframework-pabot~=2.15.0
 pyyaml~=5.4
 ```
 
-References:    
-robotframework:
-https://docs.robotframework.org/docs
-https://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html
-browser library:
-https://robotframework-browser.org 
-https://marketsquare.github.io/robotframework-browser/Browser.html
-https://github.com/MarketSquare/robotframework-browser#robotframework-browser
+References:      
+robotframework:  
+https://docs.robotframework.org/docs  
+https://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html  
+browser library:  
+https://robotframework-browser.org   
+https://marketsquare.github.io/robotframework-browser/Browser.html  
+https://github.com/MarketSquare/robotframework-browser#robotframework-browser  
 
 Courses of Robot Framework (PT_BR):  
 https://www.udemy.com/course/automacao-de-testes-com-robot-framework-basico/  
-https://www.udemy.com/course/automacao-de-testes-com-robot-framework-avancado    
+https://www.udemy.com/course/automacao-de-testes-com-robot-framework-avancado   
