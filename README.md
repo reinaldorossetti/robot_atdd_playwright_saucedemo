@@ -5,7 +5,7 @@ Projeto Exemplo usando o Robot Framework. Projeto para estudo sobre o Framework.
 
 Report do Projeto utilizando o Git Actions:   
 chromium browser:
-reinaldorossetti.github.io/robot_atdd_playwright_saucedemo/chromium/#
+https://reinaldorossetti.github.io/robot_atdd_playwright_saucedemo/chromium/#
 firefox browser:
 https://reinaldorossetti.github.io/robot_atdd_playwright_saucedemo/firefox/#
 
