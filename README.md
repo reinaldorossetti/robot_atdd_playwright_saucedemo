@@ -4,18 +4,19 @@ Sample Project with Robot e Playwright Frameworks (Allure Report and GitActions 
 Projeto Exemplo usando o Robot Framework. Projeto para estudo sobre o Framework.  
 
 Report do Projeto utilizando o Git Actions:   
-chromium browser:
-https://reinaldorossetti.github.io/robot_atdd_playwright_saucedemo/chromium/#
-firefox browser:
-https://reinaldorossetti.github.io/robot_atdd_playwright_saucedemo/firefox/#
-
+chromium browser:  
+https://reinaldorossetti.github.io/robot_atdd_playwright_saucedemo/chromium/#  
+firefox browser:  
+https://reinaldorossetti.github.io/robot_atdd_playwright_saucedemo/firefox/#  
+webkit browser:
+https://reinaldorossetti.github.io/robot_atdd_playwright_saucedemo/webkit/#
 
 Na esteira estamos usando em uma PIPELINE o Pabot para rodar em paralelo as features:  
 https://github.com/reinaldorossetti/robot_samples_api_test/blob/main/.github/workflows/test_robot_pabot.yml  
 
-Pré-requisito Instalação do Python 3.9.4, e o mesmo deve setar as váriaveis de ambiente no SO.
-https://www.python.org/downloads/release/python-394/
-** Obs: Na instalação do Pythons selecione a opção para adicionar no Path do Sistema, senão vai precisar adicionar manualmente.
+Pré-requisito Instalação do Python 3.11, e o mesmo deve setar as váriaveis de ambiente no SO.  
+https://www.python.org/downloads/release/python-3110/  
+** Obs: Na instalação do Pythons selecione a opção para adicionar no Path do Sistema, senão vai precisar adicionar manualmente.  
 
 Estamos usando a versão 6.0.2, ultima versão mais estável atualmente:
 Release Notes: https://github.com/robotframework/robotframework/blob/master/doc/releasenotes/rf-6.0.2.rst
@@ -44,20 +45,10 @@ Run All Tests:
 ```
 python -m robot -d my_reports ./  
 ```
-Api features, By File Path:
-```
-python -m robot -d my_reports --loglevel DEBUG:FAIL features/specifications/weather
-python -m robot -d my_reports --loglevel DEBUG:INFO features/specifications/weather
-```
 
-Add variable in command line:
+Run Tests By TAG:
 ```
-python -m robot -d my_reports --variable LOG_LEVEL:INFO features/specifications/weather
-```
-
-Comando diretamente pelo robot.
-```
-robot --loglevel DEBUG:INFO -d my_reports -i api_tests ./  
+robot --loglevel DEBUG:INFO -d my_reports -i shopping_cart_tests ./ 
 ```
 Rodando o report local:
 ```

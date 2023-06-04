@@ -2,7 +2,6 @@
 
 Resource     ../../../support/baseTests.robot
 Variables    ../elements/shopping_cart_page.yaml
-Library    String
 
 *** Keywords ***
 Setting the Data for Testing
@@ -75,7 +74,6 @@ Set Item Delete in Locator
 
 Validate the list of elements
     ${list_count}=                  Get Length    ${list_names}
-    Log To Console    "list: @{list_names}, ${list_count}"
     IF    ${list_count}>0
         FOR    ${item}    IN    @{list_names}
             Set Item in Locator        ${item}

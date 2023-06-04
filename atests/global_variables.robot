@@ -2,7 +2,7 @@
 Library        Browser
 Library        Collections
 Library        FakerLibrary
-Library        RequestsLibrary
+Library        String
 
 *** Variables ***
 

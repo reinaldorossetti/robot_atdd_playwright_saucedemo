@@ -6,7 +6,7 @@ Suite Setup       Set Log Level    ${LOG_LEVEL}
 Test Setup        Setting the Data for Testing
 Test Teardown     Steps to Close Browser  
 
-Default Tags    shopping_cart_tests
+Force Tags    shopping_cart_tests
 
 *** Variables ***
 ${PRODUCTS_ADD}=          Sauce Labs Bolt T-Shirt, Sauce Labs Fleece Jacket
