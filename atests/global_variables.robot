@@ -11,3 +11,4 @@ ${PATH_FEATURES}         ${EXECDIR}/atests/features
 ${LOG_LEVEL}             DEBUG
 ${DIC_EMPTY}
 ${HEADLESS_FLAG}         ${False}
+${BROWSER}               chromium

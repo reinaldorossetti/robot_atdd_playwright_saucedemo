@@ -12,7 +12,14 @@ permissions: write-all
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    name: Robot@${{matrix.browser}}_${{matrix.os}}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest]
+        browser: [chromium,firefox,webkit]
+        # browser-channel: [chrome,msedge]
+    runs-on: ${{ matrix.os }}
     permissions:
       contents: write
     steps:
@@ -36,7 +43,7 @@ jobs:
       if: always()
       continue-on-error: true
       run: |
-        pabot --outputdir my_reports --listener allure_robotframework --variable  HEADLESS_FLAG:True    atests/features/
+        pabot --outputdir my_reports --listener allure_robotframework --variable  HEADLESS_FLAG:True  --variable  BROWSER:${{matrix.browser}}     atests/features/
       env:
         ALLURE_MAX_STEP_MESSAGE_COUNT: 5
     #- name: Rerun tests failed
@@ -61,4 +68,4 @@ jobs:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_branch: gh-pages  # default: gh-pages
         publish_dir: allure-results
-        destination_dir: allure-results
+        destination_dir: ${{ matrix.browser}}
