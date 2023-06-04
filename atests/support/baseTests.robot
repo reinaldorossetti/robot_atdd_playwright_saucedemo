@@ -9,10 +9,10 @@ Library         libraries/baseTests.py
 You display the Login Page
     ${DIC_EMPTY}=     Create Dictionary
     Set Browser Timeout    50s
-    Open Browser    ${URL_SITE}
-    ...    headless=${False}
-    Wait For All Promises
-    Wait Until Network Is Idle
+    New Browser    chromium    headless=False    channel=chrome
+    New Context
+    New Page    ${URL_SITE}
+    Wait Until Network Is Idle    timeout=20s
 
 Successful login testing
     You display the Login Page
@@ -20,5 +20,5 @@ Successful login testing
     Validate if the login was successful
 
 Steps to Close Browser
-    Take Screenshot    ${TEST_NAME}
+    Run Keyword And Ignore Error     Take Screenshot    filename=${TEST_NAME}    timeout=10
     Close Browser

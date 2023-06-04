@@ -36,9 +36,9 @@ C:\Users\<user_name_here>\AppData\Roaming\Python\Python311\site-packages\Browser
 
 Command line to runner:
 
-Api features, by tag api_tests:
+Run All Tests:
 ```
-python -m robot -d my_reports -i api_tests ./  
+python -m robot -d my_reports ./  
 ```
 Api features, By File Path:
 ```
