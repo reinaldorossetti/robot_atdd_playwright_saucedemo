@@ -1,0 +1,5 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Sun Jun 04 18:17:21 UTC 2023","Sun Jun 04 18:17:26 UTC 2023","5514","Features","Login Spec","Login Tests","","","Scenario - Successful login testing",""
+"passed","Sun Jun 04 18:17:21 UTC 2023","Sun Jun 04 18:17:27 UTC 2023","6312","Features","Shopping Cart Spec","Shopping Cart Tests","","","Scenario - Shopping cart checkout itens in cart",""
+"passed","Sun Jun 04 18:17:32 UTC 2023","Sun Jun 04 18:17:42 UTC 2023","10384","Features","Shopping Cart Spec","Shopping Cart Tests","","","Scenario - Shopping cart checkout remove all itens in cart",""
+"passed","Sun Jun 04 18:17:27 UTC 2023","Sun Jun 04 18:17:32 UTC 2023","4418","Features","Shopping Cart Spec","Shopping Cart Tests","","","Scenario - Shopping cart checkout remove iten in cart",""
