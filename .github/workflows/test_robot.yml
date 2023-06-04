@@ -4,8 +4,6 @@ name: Robot Testing
 on:
   push:
     branches: [ main ]
-  pull_request:
-    branches: [ main ]
   workflow_dispatch:
   schedule:
     # * is a special character in YAML so you have to quote this string
@@ -35,7 +33,7 @@ jobs:
       if: always()
       continue-on-error: true
       run: |
-        python -m robot --listener allure_robotframework -d my_reports -i api_tests ./
+        python -m robot --listener allure_robotframework -d my_reports  ./
       env:
         ALLURE_MAX_STEP_MESSAGE_COUNT: 5
     #- name: Rerun tests failed
