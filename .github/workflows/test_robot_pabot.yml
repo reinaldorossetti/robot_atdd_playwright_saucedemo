@@ -70,3 +70,35 @@ jobs:
         publish_branch: gh-pages  # default: gh-pages
         publish_dir: allure-results
         destination_dir: ${{ matrix.browser}}
+    - name: Send mail
+      uses: dawidd6/action-send-mail@v3
+      with:
+        connection_url: ${{secrets.MAIL_CONNECTION}}
+        # Required mail server address if not connection_url:
+        server_address: smtp.gmail.com
+        # Server port, default 25:
+        server_port: 465
+        # Optional whether this connection use TLS (default is true if server_port is 465)
+        secure: true
+        # Optional (recommended) mail server username:
+        username: ${{secrets.MAIL_USERNAME}}
+        # Optional (recommended) mail server password:
+        password: ${{secrets.MAIL_PASSWORD}}
+        # Required mail subject:
+        subject: Github Actions test job result
+        # Required recipients' addresses:
+        to: reiload@gmail.com
+        # Required sender full name (address can be skipped):
+        from: automation.reinaldo@gmail.com
+        # Optional plain body:
+        html_body: <p>Build of Tests ;) Projeto https://github.com/${{github.repository}} </p><br>
+              <p>Chromium Report <a href="https://reinaldorossetti.github.io/robot_atdd_playwright_saucedemo/chromium/#">Link Chromium</a></p>
+              <p>Firefox Report <a href="https://reinaldorossetti.github.io/robot_atdd_playwright_saucedemo/firefox/#">Link Firefox</a></p>
+              <p>Webkit Report <a href="https://reinaldorossetti.github.io/robot_atdd_playwright_saucedemo/webkit/#">Link Webkit</a></p>
+        # Optional unsigned/invalid certificates allowance:
+        ignore_cert: true
+        # Optional converting Markdown to HTML (set content_type to text/html too):
+        convert_markdown: true
+        attachments: attachments.zip,git.diff,./my_reports/*.*
+        # Optional priority: 'high', 'normal' (default) or 'low'
+        priority: normal
