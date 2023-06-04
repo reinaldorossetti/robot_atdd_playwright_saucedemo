@@ -1,8 +1,9 @@
 *** Settings ***
 Resource        keywords/login_keywords.robot
 
-Suite Teardown    Close Browser
-Default Tags    login_tests
+Suite Setup       Set Log Level    ${LOG_LEVEL}
+Test Teardown     Steps to Close Browser  
+Default Tags      login_tests
 
 *** Test Cases ***
 Scenario - Successful login testing

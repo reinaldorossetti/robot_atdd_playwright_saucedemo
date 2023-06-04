@@ -1,6 +1,7 @@
 from robot.api import logger
 from robot.libraries.BuiltIn import BuiltIn
 from robot.utils.asserts import fail
+import allure
 import jsonschema
 import json
 
@@ -17,3 +18,10 @@ def validate_json_schema(schema_path, response, encoding=None):
         fail(f"Json does not match the schema: {e.schema}")
     except jsonschema.SchemaError as e:
         fail(f"Json schema error: {e}")
+
+def capture_page_screenshot(path,screen_name):
+    try:
+         allure.attach.file(path, screen_name, attachment_type=allure.attachment_type.JPG)
+    except:
+        fail(f"Falhou ao anexar o screenshot ao allure report")
+    return path

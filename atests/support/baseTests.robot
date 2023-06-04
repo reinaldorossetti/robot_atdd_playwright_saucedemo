@@ -20,5 +20,7 @@ Successful login testing
     Validate if the login was successful
 
 Steps to Close Browser
-    Run Keyword And Ignore Error     Take Screenshot    filename=${TEST_NAME}    timeout=10
+    Run Keyword And Ignore Error     
+    ...    Take Screenshot    filename=${TEST_NAME}    timeout=10
+    Capture Page Screenshot      ${OUTPUTDIR}/browser/screenshot/${TEST_NAME}.png    ${TEST_NAME}
     Close Browser
