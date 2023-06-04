@@ -2,8 +2,6 @@
 # For more information see: https://help.github.com/actions/language-and-framework-guides/using-python-with-github-actions
 name: Robot Testing
 on:
-  push:
-    branches: [ main ]
   workflow_dispatch:
   schedule:
     # * is a special character in YAML so you have to quote this string
@@ -29,11 +27,12 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         pip install -r requirements.txt
+        rfbrowser init
     - name: Run tests
       if: always()
       continue-on-error: true
       run: |
-        python -m robot --listener allure_robotframework -d my_reports  ./
+        python -m robot --listener allure_robotframework --variable  HEADLESS_FLAG:True -d my_reports  ./
       env:
         ALLURE_MAX_STEP_MESSAGE_COUNT: 5
     #- name: Rerun tests failed
