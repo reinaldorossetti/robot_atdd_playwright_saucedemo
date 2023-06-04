@@ -1,0 +1,5 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"failed","Sun Jun 04 18:17:13 UTC 2023","Sun Jun 04 18:17:14 UTC 2023","850","Features","Shopping Cart Spec","Shopping Cart Tests","","","Scenario - Shopping cart checkout remove iten in cart",""
+"failed","Sun Jun 04 18:17:11 UTC 2023","Sun Jun 04 18:17:13 UTC 2023","1427","Features","Shopping Cart Spec","Shopping Cart Tests","","","Scenario - Shopping cart checkout itens in cart",""
+"failed","Sun Jun 04 18:17:11 UTC 2023","Sun Jun 04 18:17:13 UTC 2023","1434","Features","Login Spec","Login Tests","","","Scenario - Successful login testing",""
+"failed","Sun Jun 04 18:17:14 UTC 2023","Sun Jun 04 18:17:14 UTC 2023","809","Features","Shopping Cart Spec","Shopping Cart Tests","","","Scenario - Shopping cart checkout remove all itens in cart",""
