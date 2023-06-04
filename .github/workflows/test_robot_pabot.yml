@@ -8,10 +8,13 @@ on:
   schedule:
     # * is a special character in YAML so you have to quote this string
     - cron:  '30 10 * * 5'
-    
+  permissions: write-all
+
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
     - uses: actions/checkout@v3
     - uses: actions/setup-node@v3
