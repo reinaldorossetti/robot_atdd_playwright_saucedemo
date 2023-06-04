@@ -10,3 +10,4 @@ ${URL_SITE}              https://www.saucedemo.com/
 ${PATH_FEATURES}         ${EXECDIR}/atests/features
 ${LOG_LEVEL}             DEBUG
 ${DIC_EMPTY}
+${HEADLESS_FLAG}         ${False}

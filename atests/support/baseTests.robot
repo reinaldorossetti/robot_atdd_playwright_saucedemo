@@ -9,7 +9,7 @@ Library         libraries/baseTests.py
 You display the Login Page
     ${DIC_EMPTY}=     Create Dictionary
     Set Browser Timeout    50s
-    New Browser    chromium    headless=False    channel=chrome
+    New Browser    chromium    headless=${HEADLESS_FLAG}    channel=chrome
     New Context
     New Page    ${URL_SITE}
     Wait Until Network Is Idle    timeout=20s

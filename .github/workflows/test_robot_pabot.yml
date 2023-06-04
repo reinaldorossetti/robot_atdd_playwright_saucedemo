@@ -32,7 +32,7 @@ jobs:
       if: always()
       continue-on-error: true
       run: |
-        pabot --outputdir my_reports --listener allure_robotframework  atests/features/
+        pabot --outputdir my_reports --listener allure_robotframework --variable  HEADLESS_FLAG:True    atests/features/
       env:
         ALLURE_MAX_STEP_MESSAGE_COUNT: 5
     #- name: Rerun tests failed
