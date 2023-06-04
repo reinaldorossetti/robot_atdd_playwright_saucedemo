@@ -90,7 +90,7 @@ jobs:
         from: automation.reinaldo@gmail.com
         # Optional plain body:
         html_body: <p><b>Build of Tests ;) </p></b><br>
-              <p>Project URL <a href="https://github.com/reinaldorossetti/robot_atdd_playwright_saucedemo"> </p><br>
+              <p>Project URL <a href="https://github.com/reinaldorossetti/robot_atdd_playwright_saucedemo">Project Link</a></p><br>
               <p>Report ${{matrix.browser}} <a href="https://reinaldorossetti.github.io/robot_atdd_playwright_saucedemo/${{matrix.browser}}/#">Link ${{matrix.browser}}</a></p>
         # Optional unsigned/invalid certificates allowance:
         ignore_cert: true
