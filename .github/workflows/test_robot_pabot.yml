@@ -51,7 +51,7 @@ jobs:
       continue-on-error: true
       run: |
        python -m robot --listener allure_robotframework --rerunfailed my_reports/${{matrix.browser}}/output.xml --output my_reports/${{matrix.browser}}/rerun.xml -i api_tests ./
-     env:
+      env:
         ALLURE_MAX_STEP_MESSAGE_COUNT: 5
     - name: 📊 Collect Allure files and generate allure-report folder
       run: |
