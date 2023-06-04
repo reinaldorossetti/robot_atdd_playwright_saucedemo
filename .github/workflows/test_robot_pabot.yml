@@ -91,10 +91,8 @@ jobs:
         # Required sender full name (address can be skipped):
         from: automation.reinaldo@gmail.com
         # Optional plain body:
-        html_body: <p>Build of Tests ;) Projeto https://github.com/${{github.repository}} </p><br>
-              <p>Chromium Report <a href="https://reinaldorossetti.github.io/robot_atdd_playwright_saucedemo/chromium/#">Link Chromium</a></p>
-              <p>Firefox Report <a href="https://reinaldorossetti.github.io/robot_atdd_playwright_saucedemo/firefox/#">Link Firefox</a></p>
-              <p>Webkit Report <a href="https://reinaldorossetti.github.io/robot_atdd_playwright_saucedemo/webkit/#">Link Webkit</a></p>
+        html_body: <p>Build of Tests ;) Project URL https://github.com/${{github.repository}} </p><br>
+              <p>Report ${{matrix.browser}} <a href="https://reinaldorossetti.github.io/robot_atdd_playwright_saucedemo/chromium/#">Link ${{matrix.browser}}</a></p>
         # Optional unsigned/invalid certificates allowance:
         ignore_cert: true
         # Optional converting Markdown to HTML (set content_type to text/html too):
