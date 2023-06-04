@@ -1,5 +1,4 @@
 allure-robotframework~=2.13.1
-robotframework-requests==0.9.2
 robotframework==6.0.2
 robotframework-browser==16.2.0
 robotframework-faker~=5.0.0

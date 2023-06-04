@@ -2,3 +2,5 @@ USER: standard_user
 OUT_USER: locked_out_user
 PROBLEM_USER: problem_user
 PASSWORD: secret_sauce
+INCORRECT_PASSWORD: 1234567
+INCORRECT_USER: abcde
