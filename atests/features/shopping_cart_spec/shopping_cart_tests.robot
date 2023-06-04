@@ -2,7 +2,7 @@
 Resource        keywords/shopping_cart_keywords.robot
 Resource        ../../support/baseTests.robot
 
-Test Setup    Set Log Level    ${LOG_LEVEL}
+Suite Setup   Set Log Level    ${LOG_LEVEL}
 
 Test Teardown    Steps to Close Browser  
 
@@ -13,5 +13,6 @@ Successful login testing
     [Tags]    shopping_cart_ok
     Given Successful login testing
     When Select Inventory Item by Name   Sauce Labs Bolt T-Shirt
-    AND Select Inventory Item by Name    Sauce Labs Fleece Jacket
+    And Select Inventory Item by Name    Sauce Labs Fleece Jacket
+    And Select the option to view the items in your cart
     Then Validate in Cart

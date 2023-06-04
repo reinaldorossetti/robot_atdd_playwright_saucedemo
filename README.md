@@ -30,6 +30,9 @@ Install Browser library from PyPi with pip:
 Initialize the Browser library:
 > rfbrowser init
 
+WINDOWS ONLY: Add path to Browser library: 
+C:\Users\<user_name_here>\AppData\Roaming\Python\Python311\site-packages\Browser
+
 
 Command line to runner:
 
