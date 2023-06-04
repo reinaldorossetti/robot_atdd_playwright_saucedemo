@@ -160,6 +160,9 @@ cython_debug/
 .idea/
 log.html
 output.xml
+report.html
+.pabotsuitenames
 playwright-log.txt
 interactive_console_output.xml
 output/
+browser/
