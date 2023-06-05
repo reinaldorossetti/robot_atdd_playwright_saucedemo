@@ -1,0 +1,26 @@
+==============================================================================
+Features                                                                      
+==============================================================================
+Features.Shopping Cart Spec                                                   
+==============================================================================
+Features.Shopping Cart Spec.Shopping Cart Tests                               
+==============================================================================
+Scenario - Shopping cart checkout itens in cart                       "list: ['Sauce Labs Bolt T-Shirt', ' Sauce Labs Fleece Jacket'], 2"
+| PASS |
+------------------------------------------------------------------------------
+Scenario - Shopping cart checkout remove iten in cart                 "list: [' Sauce Labs Fleece Jacket'], 1"
+| PASS |
+------------------------------------------------------------------------------
+Scenario - Shopping cart checkout remove all itens in cart            "list: [], 0"
+| PASS |
+------------------------------------------------------------------------------
+Features.Shopping Cart Spec.Shopping Cart Tests                       | PASS |
+3 tests, 3 passed, 0 failed
+==============================================================================
+Features.Shopping Cart Spec                                           | PASS |
+3 tests, 3 passed, 0 failed
+==============================================================================
+Features                                                              | PASS |
+3 tests, 3 passed, 0 failed
+==============================================================================
+Output:  C:\GitHub\robot_atdd_playwright_saucedemo\my_reports\pabot_results\1\output.xml
