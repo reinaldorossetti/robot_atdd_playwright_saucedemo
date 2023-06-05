@@ -12,13 +12,13 @@ Scenario - Successful login testing
     When Perform the site authentication
     Then Validate if the login was successful
 
-Scenario - Negative test, test with wrong login user
+Scenario - Negative test, test with wrong user password
     [Tags]    login_fail
     Given You display the Login Page
     When Perform the site authentication    ${USER}    ${INCORRECT_PASSWORD}
     Then Validate if the login was fail
 
-Scenario - Negative test, test with wrong login user
+Scenario - Negative test, test with wrong user name and password
     [Tags]    login_fail
     Given You display the Login Page
     When Perform the site authentication   ${INCORRECT_USER}    ${INCORRECT_PASSWORD}
